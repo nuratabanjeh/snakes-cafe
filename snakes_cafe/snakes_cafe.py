@@ -38,9 +38,10 @@ orderNames=[]
 def orderingOperator():
     
     order=input('>')
+    order= order.lower()
     if order.lower() in cafeMenu:
         orderArray.append(order)
-        if order not in orderNames:
+        if order.lower() not in orderNames:
             orderNames.append(order)
         print(f'** {orderArray.count(order)} order of {order} have been added to your meal **')
         orderingOperator()
